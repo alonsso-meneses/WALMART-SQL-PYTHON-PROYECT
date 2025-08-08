@@ -13,6 +13,7 @@ Pasos del Proyecto
 - Obtén tu token de API en tu perfil de Kaggle descargando el archivo JSON.
 - Coloca el archivo kaggle.json en la carpeta local .kaggle.
 - Usa el comando kaggle datasets download -d <ruta-del-dataset> para descargar los datos directamente en tu proyecto.
+<pre> pip install kaggle </pre>
 
 3. Descargar Datos de Ventas de Walmart
 Fuente de datos: Usa la API de Kaggle para descargar los datasets de ventas de Walmart.
