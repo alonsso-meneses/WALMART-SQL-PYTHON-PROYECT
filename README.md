@@ -38,16 +38,46 @@ Corrección de tipos: Asegura que todas las columnas tengan tipos de datos corre
 Formateo de moneda: Usa .replace() para limpiar símbolos de moneda.
 Validación: Verifica la consistencia después de limpiar.
 
-7. Ingeniería de Características
+<pre> ```import pandas as pd
+
+df = pd.read_csv(r'C:\Users\alons\Desktop\Proyect-walmart\Walmart.csv', encoding_errors='ignore')
+
+print(df.head())
+
+print("Duplicados:", df.duplicated().sum())
+print("Nulos por columna:\n", df.isnull().sum())
+
+df.dropna(inplace=True)
+
+print("Nulos después de dropna:\n", df.isnull().sum())
+print("Forma del DataFrame:", df.shape)
+print("Tipos de datos:\n", df.dtypes)
+
+df['unit_price'] = df['unit_price'].str.replace('$', '', regex=False)
+
+print(df.head())
+
+df['unit_price'] = pd.to_numeric(df['unit_price'], errors='coerce')
+
+df['total'] = df['unit_price'] * df['quantity']
+
+print(df.head())
+
+df.to_csv(r'C:\Users\alons\Desktop\Proyect-walmart\datos_limpios.csv', index=False)
+
+print(" Archivo limpio guardado como 'datos_limpios.csv'")``` </pre>
+
+
+8. Ingeniería de Características
 Crear nuevas columnas: Calcula el monto total por transacción multiplicando unit_price por quantity.
 Mejorar dataset: Facilita análisis y agregaciones posteriores con SQL.
 
-8. Cargar Datos a MySQL y PostgreSQL
+9. Cargar Datos a MySQL y PostgreSQL
 Configurar conexiones: Usa SQLAlchemy para conectar y cargar datos limpios a MySQL y PostgreSQL.
 Creación de tablas: Automatiza creación de tablas e inserción con scripts Python.
 Verificación: Ejecuta consultas para asegurar que los datos se cargaron correctamente.
 
-9. Análisis SQL: Consultas Complejas y Resolución de Problemas de Negocio
+10. Análisis SQL: Consultas Complejas y Resolución de Problemas de Negocio
 Analiza tendencias de ingresos por sucursal y categoría.
 Identifica las categorías de productos más vendidas.
 Evalúa el rendimiento de ventas por tiempo, ciudad y método de pago.
