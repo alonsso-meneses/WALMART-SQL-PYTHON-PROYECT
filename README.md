@@ -23,10 +23,8 @@ Almacenamiento: Guarda los datos en la carpeta data/ para fácil acceso.
 4. Instalar Librerías Necesarias y Cargar Datos
 Librerías:
 
-bash
-Copiar
-Editar
-pip install pandas numpy sqlalchemy mysql-connector-python psycopg2
+
+<pre> pip install pandas numpy sqlalchemy mysql-connector-python psycopg2 </pre>
 - Carga de datos: Lee los datos en un DataFrame de Pandas para análisis inicial y transformaciones.
 
 5. Explorar los Datos
