@@ -1,4 +1,5 @@
 # WALMART-SQL-PYTHON-PROYECT
+
 DIAGRAMA DE FLUJO:
 <img width="1920" height="1080" alt="PROCESS DATA CLEAN DATA" src="https://github.com/user-attachments/assets/d32441fc-479a-4897-af57-04f0e13cbbc8" />
 Este proyecto es una solución completa de análisis de datos diseñada para extraer insights clave del negocio a partir de los datos de ventas de Walmart. Utilizamos Python para el procesamiento y análisis de datos, SQL para consultas avanzadas, y técnicas estructuradas para resolver preguntas críticas de negocio. El proyecto es ideal para analistas de datos que buscan desarrollar habilidades en manipulación de datos, consultas SQL y creación de pipelines de datos.
@@ -67,17 +68,20 @@ df.to_csv(r'C:\Users\alons\Desktop\Proyect-walmart\datos_limpios.csv', index=Fal
 
 print(" Archivo limpio guardado como 'datos_limpios.csv'")``` </pre>
 
-
-8. Ingeniería de Características
+ 7. Ingeniería de Características
 Crear nuevas columnas: Calcula el monto total por transacción multiplicando unit_price por quantity.
 Mejorar dataset: Facilita análisis y agregaciones posteriores con SQL.
 
-9. Cargar Datos a MySQL y PostgreSQL
+9. Ingeniería de Características
+Crear nuevas columnas: Calcula el monto total por transacción multiplicando unit_price por quantity.
+Mejorar dataset: Facilita análisis y agregaciones posteriores con SQL.
+
+10. Cargar Datos a MySQL y PostgreSQL
 Configurar conexiones: Usa SQLAlchemy para conectar y cargar datos limpios a MySQL y PostgreSQL.
 Creación de tablas: Automatiza creación de tablas e inserción con scripts Python.
 Verificación: Ejecuta consultas para asegurar que los datos se cargaron correctamente.
 
-10. Análisis SQL: Consultas Complejas y Resolución de Problemas de Negocio
+11. Análisis SQL: Consultas Complejas y Resolución de Problemas de Negocio
 Analiza tendencias de ingresos por sucursal y categoría.
 Identifica las categorías de productos más vendidas.
 Evalúa el rendimiento de ventas por tiempo, ciudad y método de pago.
