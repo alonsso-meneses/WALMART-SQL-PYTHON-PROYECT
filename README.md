@@ -39,7 +39,7 @@ Corrección de tipos: Asegura que todas las columnas tengan tipos de datos corre
 Formateo de moneda: Usa .replace() para limpiar símbolos de moneda.
 Validación: Verifica la consistencia después de limpiar.
 
-<pre> ```import pandas as pd
+<pre> import pandas as pd
 
 df = pd.read_csv(r'C:\Users\alons\Desktop\Proyect-walmart\Walmart.csv', encoding_errors='ignore')
 
@@ -66,7 +66,9 @@ print(df.head())
 
 df.to_csv(r'C:\Users\alons\Desktop\Proyect-walmart\datos_limpios.csv', index=False)
 
-print(" Archivo limpio guardado como 'datos_limpios.csv'")``` </pre>
+print(" Archivo limpio guardado como 'datos_limpios.csv'") </pre>
+<img width="1366" height="768" alt="Captura de pantalla (703)" src="https://github.com/user-attachments/assets/184fcec5-5865-41e8-8668-5a429f25e29d" />
+<img width="1366" height="768" alt="Captura de pantalla (704)" src="https://github.com/user-attachments/assets/eab254aa-6092-4801-b280-6b67ad2b8d93" />
 
  7. Ingeniería de Características
 Crear nuevas columnas: Calcula el monto total por transacción multiplicando unit_price por quantity.
